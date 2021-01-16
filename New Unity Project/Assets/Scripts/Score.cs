@@ -14,7 +14,9 @@ public class Score : MonoBehaviour
     private int score_to_next_level = 10;
 
     public Text score_text;
+    public DeathMenu deathMenu;
 
+    private bool isDead = false;
 
     void Start()
     {
@@ -24,6 +26,10 @@ public class Score : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
 
         if (score >= score_to_next_level)
         {
@@ -46,4 +52,11 @@ public class Score : MonoBehaviour
 
         GetComponent<PlayerMotor>().SetSpeed(difficulty_level);
     }
+
+    public void OnDeath()
+    {
+        isDead = true;
+        deathMenu.ToggleEndMenu(score);
+    }
 }
+

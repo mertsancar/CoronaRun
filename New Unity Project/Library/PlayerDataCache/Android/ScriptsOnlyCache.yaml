@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraMotor
+    - DeathMenu
     - PlayerMotor
     - Score
     - TileManager
@@ -27,8 +28,10 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -75,6 +78,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11432}
     - Class: 114
+      Script: {instanceID: 11472}
+    - Class: 114
       Script: {instanceID: 11512}
     - Class: 114
       Script: {instanceID: 11820}
@@ -82,6 +87,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11862}
     - Class: 114
       Script: {instanceID: 11888}
+    - Class: 114
+      Script: {instanceID: 12246}
     - Class: 114
       Script: {instanceID: 12466}
     - Class: 114
@@ -96,6 +103,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12912}
     - Class: 114
       Script: {instanceID: 13078}
+    - Class: 114
+      Script: {instanceID: 32752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -109,6 +118,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -211,7 +222,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 99a1832db959e12c7261fa5cc0ef34db
+      Hash: 9753be39def745071fefb46eeec838f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
@@ -563,7 +574,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: fd603770689195d8c21e05ad28422d62
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathMenu
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/User/Unity/New Unity Project/CoronaRun-test.apk
+  playerPath: C:/Users/User/Unity/New Unity Project/CoronaRun.apk

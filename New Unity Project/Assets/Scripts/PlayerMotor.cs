@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 move_vector;
     private float vertical_velocity;
 
-
+    private bool isDead = false;
 
     [SerializeField]
     private float Speed;
@@ -25,10 +26,16 @@ public class PlayerMotor : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
    
         move_vector = Vector3.zero;
         Gravity();
         Forward();
+
+        
     }
 
     void Gravity()
@@ -70,9 +77,24 @@ public class PlayerMotor : MonoBehaviour
         Controller.Move((move_vector * Speed) * Time.deltaTime);
     }
 
+    // seviyeye göre karakter hızını arttırma
     public void SetSpeed(float difficulty_level)
     {
         Speed = 0.5f + Speed; //+ difficulty_level
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag=="fıcı")
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        Debug.Log("dead");
+        isDead = true;
+        GetComponent<Score>().OnDeath();
+    }
 }
