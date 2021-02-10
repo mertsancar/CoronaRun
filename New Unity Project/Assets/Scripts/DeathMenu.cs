@@ -7,6 +7,11 @@ using UnityEngine.UI;
 public class DeathMenu : MonoBehaviour
 {
     public Text scoreText;
+    public Image backgroundImg;
+
+    private bool isShowned = false;
+
+    private float transition = 0.0f;
 
     void Start()
     {
@@ -16,7 +21,14 @@ public class DeathMenu : MonoBehaviour
 
     void Update()
     {
-        
+        if (!isShowned)
+        {
+            return;
+        }
+
+        transition += Time.deltaTime;
+        backgroundImg.color = Color.Lerp(new Color(0, 0, 0, 0), Color.black, transition);
+
     }
 
     public void Restart()
@@ -33,5 +45,6 @@ public class DeathMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         scoreText.text = "Score: " + ((int)score).ToString();
+        isShowned = true;
     }
 }

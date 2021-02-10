@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - "f\u0131c\u0131"
+  - virus
+  - human
   layers:
   - Default
   - TransparentFX

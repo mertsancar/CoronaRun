@@ -7,8 +7,10 @@ public class TileManager : MonoBehaviour
     public GameObject[] tilePreFabs;
     private float spawn_Z = 0.0f; //7.501f
     private float safe_zone= 17.0f; //7.501f
-    private float tile_lenght = 15.002f;
+    private float tile_lenght = 15f;
     private int amount_tile_on_screen = 7;
+
+    // X:322.5 , y:-69.5, Z:83.4
 
     private Transform player_transform;
 
@@ -30,7 +32,7 @@ public class TileManager : MonoBehaviour
             }
             else
             {
-                SpawnTile(Random.Range(0, 3));
+                SpawnTile(Random.Range(1, 3));
             }
 
 
@@ -55,6 +57,7 @@ public class TileManager : MonoBehaviour
         go.transform.position = Vector3.forward * spawn_Z;
         spawn_Z += tile_lenght;
         active_tiles.Add(go);
+
     }
 
     private void DeleteTile()

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+
   
     private CharacterController Controller;
     private Vector3 move_vector;
@@ -20,6 +21,7 @@ public class PlayerMotor : MonoBehaviour
 
     void Start()
     {
+        //Screen.SetResolution(Screen.currentResolution.width / 2,Screen.currentResolution.height / 2 ,true);
         Controller = GetComponent<CharacterController>();
     }
 
@@ -85,10 +87,15 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag=="fıcı")
+        if (hit.gameObject.tag=="virus")
         {
             Death();
         }
+        else if (hit.gameObject.tag == "human")
+        {
+            Death();
+        }
+
     }
 
     private void Death()
