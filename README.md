@@ -3,7 +3,7 @@ CoronaRun is my first game with UNITY3D. CoronaRun is a game which we try to run
 coronavirus. While making this game I was inspired by endless running games like Temple Run.
 
 
-<img src="https://user-images.githubusercontent.com/57791061/112745499-92cfb000-8fb1-11eb-8016-f12da3a3d485.jpeg" width="500" height="250">
+
 
 <img src="https://user-images.githubusercontent.com/57791061/116518203-a0da5e80-a8d8-11eb-98fc-f7c0b2ae7022.PNG" width="500" height="250">
 
